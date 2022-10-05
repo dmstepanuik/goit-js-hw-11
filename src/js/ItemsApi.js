@@ -23,7 +23,7 @@ export class ItemsApi {
     const config = {
       params: {
         key: '30341549-2658c35ea7dbba4c0cdeabc27',
-        page: string,
+        page: this.page,
         per_page: 40,
         q: this.value,
         image_type: 'photo',
