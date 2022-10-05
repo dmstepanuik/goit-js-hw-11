@@ -16,6 +16,7 @@ loadMoreRef.addEventListener('click', onLoadMoreClick);
 
 async function onSearchFormSubmit(e) {
   e.preventDefault();
+
   const { value } = e.target.elements.searchQuery;
 
   await itemsApi
