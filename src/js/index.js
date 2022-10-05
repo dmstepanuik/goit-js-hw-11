@@ -2,7 +2,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import 'notiflix/dist/notiflix-3.2.5.min.css';
 import '../css/styles.css';
 import '../css/gallery.css';
-// import '../css/switch-btn.css';
 import { ItemsApi } from './ItemsApi';
 import { getItemMarkup } from './markup/get-item-markup';
 
