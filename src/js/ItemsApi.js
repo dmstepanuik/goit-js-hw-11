@@ -19,6 +19,7 @@ export class ItemsApi {
 
   async fetchItems(string) {
     this.value = string ?? this.value;
+
     const config = {
       params: {
         key: '30341549-2658c35ea7dbba4c0cdeabc27',
