@@ -17,11 +17,14 @@ loadMoreRef.addEventListener('click', onLoadMoreClick);
 
 async function onSearchFormSubmit(e) {
   e.preventDefault();
-  const input = e.target.elements.searchQuery;
+  const { value } = e.target.elements.searchQuery;
 
   await itemsApi
-    .fetchItems(input.value)
-    .then(onSuccessFetchItems)
+    .fetchItems(value)
+    .then(res => {
+      removeChildren(galleryRef);
+      onSuccessFetchItems(res);
+    })
     .catch(e => {
       removeChildren(galleryRef);
       Notify.failure(e.message);
@@ -35,7 +38,6 @@ async function onSearchFormSubmit(e) {
 }
 
 function onSuccessFetchItems(result) {
-  removeChildren(galleryRef);
   renderList(result.data.hits);
 }
 
